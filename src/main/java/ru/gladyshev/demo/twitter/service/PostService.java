@@ -12,4 +12,5 @@ public interface PostService {
 
     List<Post> findByUser(String username);
 
+    List<Post> findByTag(String username);
 }

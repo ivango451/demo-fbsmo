@@ -67,8 +67,20 @@ public class PostController {
         return "blog";
     }
 
+
+    @GetMapping("/tag/{name}")
+    public String tag(ModelMap model, @PathVariable String name){
+        model.put("title", "Find by tag");
+        model.put("subtitle", name);
+        model.put("posts", postService.findByTag(name));
+        setCommonParams(model);
+        return "blog";
+    }
+
+
     private void setCommonParams(ModelMap model){
         model.put("users", userRepository.findAll(Sort.by("username")));
+        model.put("tags", tagRepository.findAll());
     }
 
 }

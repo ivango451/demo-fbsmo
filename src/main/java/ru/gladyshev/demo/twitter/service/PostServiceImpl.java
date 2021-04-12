@@ -46,4 +46,9 @@ public class PostServiceImpl implements PostService{
         posts.size();
         return posts;
     }
+
+    @Override
+    public List<Post> findByTag(String username) {
+        return postRepository.findByTagName(username);
+    }
 }
