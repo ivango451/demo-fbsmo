@@ -37,7 +37,7 @@ CREATE TABLE post (
 
 CREATE TABLE tag (
     tag_id BIGSERIAL PRIMARY KEY,
-    name VARCHAR(50) NOT NULL UNIQUE
+    name VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE post_tag (
@@ -61,13 +61,13 @@ insert into role(name) values ('USER');
 
 
 insert into "user" (username, password, is_active)
-    values ('user1', 'user1', true);
+    values ('user1', '$2a$10$UzY2k/M2QeYjbHL.N8W.oOFNmBnrei9LdkuYZ8oFqiousDyOWCgKe', true);
 
 insert into "user" (username, password, is_active)
-    values ('user2', 'user1', true);
+    values ('user2', '$2a$10$0WxgQe/cMLBAfUDZgtpJLe/Anj15KdjwjNh9xYo769QibZtwdO5Um', true);
 
 insert into "user" (username, password, is_active)
-    values ('admin', 'user1', true);
+    values ('admin', '$2a$10$Ux6TtamVQnVRdSAr1UblauvJv0xibg97.3JqAzX4QqN5vceO2QtEq', true);
 
 insert into user_role values (3, 1);
 insert into user_role values (1, 2);
@@ -75,11 +75,11 @@ insert into user_role values (2, 2);
 
 
 insert into post (title, content, user_id, dt_created, dt_updated)
-	values ('Day 1', 'It''s all good!', 1, '2021-04-03 14:16:00'::timestamp, null);
+	values ('Day 1', 'It''s all good!', 1, current_timestamp - interval '2 days', null);
 insert into post (title, content, user_id, dt_created, dt_updated)
-	values ('Day 2', 'It''s all ok!', 1, '2021-04-03 14:16:05'::timestamp, null);
+	values ('Day 2', 'It''s all ok!', 1, current_timestamp - interval '1 days', null);
 insert into post (title, content, user_id, dt_created, dt_updated)
-	values ('Day 3', 'It''s all bad!', 2, '2021-04-03 14:16:10'::timestamp, null);
+	values ('Day 3', 'It''s all bad!', 2, current_timestamp, null);
 
 insert into comment (user_id, post_id, content, dt_created)
     values (2, 2, 'Nice!', current_timestamp);
