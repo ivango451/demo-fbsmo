@@ -22,8 +22,7 @@ import org.thymeleaf.templatemode.TemplateMode;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan({"ru.gladyshev.demo.twitter.controller", "ru.gladyshev.demo.twitter.config"})
-@EnableAspectJAutoProxy
+@ComponentScan({"ru.gladyshev.demo.twitter.config", "ru.gladyshev.demo.twitter.controller"})
 public class WebConfig implements ApplicationContextAware, WebMvcConfigurer {
 
     private ApplicationContext applicationContext;

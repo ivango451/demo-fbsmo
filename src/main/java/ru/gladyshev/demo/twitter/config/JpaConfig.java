@@ -1,6 +1,7 @@
 package ru.gladyshev.demo.twitter.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.SimpleDriverDataSource;
@@ -18,10 +19,11 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
+@ComponentScan("ru.gladyshev.demo.twitter.service")
 @EnableJpaRepositories("ru.gladyshev.demo.twitter.repository")
 public class JpaConfig {
 
-    private static final String URL = "jdbc:postgresql://localhost:5432/postgres";
+    private static final String URL = "jdbc:postgresql://localhost:5432/demo_twitter";
     private static final String LOGIN = "postgres";
     private static final String PASSWORD = "postgres";
 
@@ -40,7 +42,7 @@ public class JpaConfig {
         LocalContainerEntityManagerFactoryBean em
                 = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
-        em.setPackagesToScan("ru.specialist.java.spring.entity");
+        em.setPackagesToScan("ru.gladyshev.demo.twitter.entity");
 
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
