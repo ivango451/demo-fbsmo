@@ -2,17 +2,21 @@ package ru.gladyshev.demo.twitter.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import ru.gladyshev.demo.twitter.dto.PostDto;
+import ru.gladyshev.demo.twitter.repository.CommentRepository;
 import ru.gladyshev.demo.twitter.repository.TagRepository;
 import ru.gladyshev.demo.twitter.repository.UserRepository;
 import ru.gladyshev.demo.twitter.service.PostService;
 import ru.gladyshev.demo.twitter.service.UserService;
 
 import javax.servlet.ServletContext;
+
+import static ru.gladyshev.demo.twitter.util.PostUtils.toDto;
 
 @Controller
 public class PostController {
@@ -21,14 +25,16 @@ public class PostController {
     private final UserService userService;
     private final UserRepository userRepository;
     private final TagRepository tagRepository;
+    private final CommentRepository commentRepository;
     private final ServletContext context;
 
     @Autowired
-    public PostController(PostService postService, UserService userService, UserRepository userRepository, TagRepository tagRepository, ServletContext context) {
+    public PostController(PostService postService, UserService userService, UserRepository userRepository, TagRepository tagRepository, CommentRepository commentRepository, ServletContext context) {
         this.postService = postService;
         this.userService = userService;
         this.userRepository = userRepository;
         this.tagRepository = tagRepository;
+        this.commentRepository = commentRepository;
         this.context = context;
     }
 
@@ -46,12 +52,12 @@ public class PostController {
             model.put("posts",  postService.search(search));
             model.put("title", "Search by");
             model.put("subtitle", search);
-            model.put("users", userService.getAllUsers());
+            model.put("users", userService.findAll());
             return "blog";
         } else {
             model.put("title", "All posts");
             model.put("posts", postService.getAllPosts());
-            model.put("users", userService.getAllUsers());
+            model.put("users", userService.findAll());
             setCommonParams(model);
             return "blog";
         }
@@ -75,6 +81,51 @@ public class PostController {
         model.put("posts", postService.findByTag(name));
         setCommonParams(model);
         return "blog";
+    }
+
+    @GetMapping("/post/new")
+    @PreAuthorize("hasRole('USER')")
+    public String postNew(ModelMap modelMap) {
+        setCommonParams(modelMap);
+        return "post-new";
+    }
+
+    @PostMapping("/post/new")
+    public String postNew(PostDto postDto) {
+        postService.createPost(postDto);
+        return "redirect:/";
+    }
+
+    @GetMapping("/post/{postId}/edit")
+    public String postEdit(ModelMap modelMap,
+                           @PathVariable long postId) {
+        postService.checkAuthority(postId);
+        modelMap.put("post", toDto(postService.findById(postId)));
+        setCommonParams(modelMap);
+        return "post-edit";
+    }
+
+    @PostMapping("/post/edit")
+    public String postEdit(PostDto postDto) {
+        postService.update(postDto);
+        return "redirect:/";
+    }
+
+
+    @GetMapping("/post/{id}")
+    public String post(@PathVariable long id,
+                       ModelMap modelMap){
+        modelMap.put("post", postService.findById(id));
+        modelMap.put("comments", commentRepository.findByPost_PostId(id));
+        setCommonParams(modelMap);
+        return "post";
+    }
+
+
+    @PostMapping("/post/{id}/delete")
+    @ResponseStatus(HttpStatus.OK)
+    public void delete(@PathVariable long id){
+        postService.delete(id);
     }
 
 

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:include="fragments.html :: header">
+
+    <title id="pageTitle"></title>
+    <link th:href="@{/resources/css/profile.css}" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+<!-- Navigation -->
+<nav    th:insert="fragments.html :: navigation"
+        class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+</nav>
+
+
+<!-- Page content -->
+
+<div class="container">
+    <div id="content" class="content p-0">
+        <div class="profile-header" th:object="${profile}"">
+         <input type="hidden" th:field="*{profile.postId}"/>
+            <div class="profile-header-cover"></div>
+            <div class="profile-header-content">
+                <div class="profile-header-img mb-4">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="mb-4" alt="" />
+                </div>
+
+                <div class="profile-header-info">
+
+                    <h4 class="m-t-sm" th:text="${profile.user.username}"></h4>
+                    <p class="m-b-sm">UXUI + Frontend Developer</p>
+                    <a href="#" class="btn btn-xs btn-primary mb-2">Edit Profile</a>
+                </div>
+            </div>
+
+        <div th:each="post: ${posts}" th:id="'post-' + ${post.postId}" class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title" th:text="${post.title}"></h2>
+                <p class="card-text" th:text="${post.content}"></p>
+                <a th:href="@{/post/{postId}(postId = ${post.postId})}" class="btn btn-primary">View</a>
+                <a  th:if="${#authentication.name == post.user.username}"
+                    th:href="@{/post/{postId}/edit(postId = ${post.postId})}"
+                    class="btn btn-secondary">Edit</a>
+                <a th:if="${#authentication.name == post.user.username or #authorization.expression('hasRole(''ADMIN'')')}"
+                   th:onclick="'deletePost(\'' + ${post.postId} + '\');'"
+                   class="btn btn-danger">Delete</a>
+
+            </div>
+            <div class="card-footer text-muted">
+                Posted on <span
+                    th:text="${#temporals.format(post.dtCreated, 'dd/MM/yyyy HH:mm')}"></span>
+                <a th:href="@{/user/{username}(username = ${post.user.username})}"
+                   th:text="${post.user.username}"></a>
+            </div>
+        </div>
+        </div>
+
+        <div class="profile-container">
+            <div class="row row-space-20">
+
+<!--                <div class="col-md-4 hidden-xs hidden-sm">-->
+<!--                    <ul class="profile-info-list">-->
+<!--                        <li class="title">PERSONAL INFORMATION</li>-->
+<!--                        <li>-->
+<!--                            <div class="field">Occupation:</div>-->
+<!--                            <div class="value">UXUI / Frontend Developer</div>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <div class="field">Skills:</div>-->
+<!--                            <div class="value">C++, PHP, HTML5, CSS, jQuery, MYSQL, Ionic, Laravel, Phonegap, Bootstrap, Angular JS, Angular JS, Asp.net</div>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <div class="field">Birth of Date:</div>-->
+<!--                            <div class="value">1989/11/04</div>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <div class="field">Country:</div>-->
+<!--                            <div class="value">San Francisco</div>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <div class="field">Address:</div>-->
+<!--                            <div class="value">-->
+<!--                                <address class="m-b-0">-->
+<!--                                    Twitter, Inc.<br />-->
+<!--                                    1355 Market Street, Suite 900<br />-->
+<!--                                    San Francisco, CA 94103-->
+<!--                                </address>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <div class="field">Phone No.:</div>-->
+<!--                            <div class="value">-->
+<!--                                (123) 456-7890-->
+<!--                            </div>-->
+<!--                        </li>-->
+
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

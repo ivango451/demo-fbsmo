@@ -4,6 +4,9 @@ package ru.gladyshev.demo.twitter.entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 
 import javax.persistence.*;
@@ -17,7 +20,7 @@ import java.util.stream.Collectors;
 @Getter
 @Setter
 @Table(name="\"user\"")
-public class User{
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -48,5 +51,38 @@ public class User{
     @Column(name = "dt_created")
     private LocalDateTime dtCreated;
 
+    @OneToOne(mappedBy = "user")
+    private Profile profile;
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return isActive();
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return isActive();
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return isActive();
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return isActive();
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return getRoles().stream()
+                .map(r -> new SimpleGrantedAuthority("ROLE_" + r.getName()))
+                .collect(Collectors.toList());
+    }
 
 }
