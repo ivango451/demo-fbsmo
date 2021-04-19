@@ -258,3 +258,10 @@ UPDATE profile SET name = 'Masha', last_name = 'Gladysheva' where username = 'ma
 DELETE from post WHERE user_id = 1;
 DELETE from user_role WHERE user_id = 1;
 DELETE from "user" WHERE user_id = 1;
+
+
+CREATE VIEW largePosts AS
+SELECT u.user_id, u.username, p.title, p.content from "user" u INNER JOIN post p ON u.user_id = p.user_id WHERE char_length(p.content)  > (SELECT AVG(char_length(content)) FROM post);
+
+
+SELECT * FROM largePosts;
