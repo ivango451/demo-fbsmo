@@ -1,0 +1,219 @@
+/* Подвал сайта */
+.foot_up {
+    background: no-repeat url("../images/footer_1.png");
+    background-size: 100% 100%;
+}
+
+.foot_flex {
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1640px;
+    display: flex;
+    padding-bottom: 38px;
+}
+
+.foot_left_three {
+    color: white;
+    padding-top: 38px;
+    justify-content: space-between;
+    display: flex;
+    width: 742px;
+}
+
+.foot_title {
+    padding-bottom: 29px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.foot_contacts_info div {
+    font-size: 14px;
+}
+
+.foot_contacts_padding {
+    padding-top: 18px;
+}
+
+.foot_federation_info a {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: white;
+    display: block;
+}
+
+.foot_smi_info a {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: white;
+    display: block;
+}
+
+a.foot_active {
+    color: #226262;
+}
+
+.foot_right_two {
+    display: flex;
+    width: 590px;
+    justify-content: space-between;
+}
+
+.foot_right_titles {
+    padding-top: 38px;
+}
+
+.foot_right_titles a {
+    display: flex;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 19px;
+}
+
+.foot_right_titles .right_title_sub {
+    margin-top: 48px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.foot_social_icons {
+    align-items: center;
+    padding-top: 13px;
+    width: 164px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot_vk {
+    height: 19px;
+}
+
+.foot_instagram {
+    height: 26px;
+}
+
+.foot_tg {
+    height: 22px;
+}
+
+.foot_down {
+    background: no-repeat url(../images/footer_02.png);
+    background-size: 100% 1100%;
+    padding-bottom: 39px;
+}
+
+.foot_down_contain {
+    width: 1648px;
+    margin: 0 auto;
+}
+
+.down_two_left {
+    align-items: center;
+    display: flex;
+    width: 419px;
+    justify-content: space-between;
+}
+
+.foot_down_info {
+    padding-top: 39px;
+    align-items: center;
+    width: 570px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot_down_text {
+    padding-top: 15px;
+    width: 323px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 1670px) {
+    .foot_flex {
+        width: 100%;
+        padding: 0 30px 38px 30px;
+    }
+
+    .foot_down_contain {
+        padding: 0 30px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1360px) {
+    .foot_arrow{
+        display: none;
+    }
+
+    .foot_right_two {
+        display: flex;
+        width: 200px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1070px) {
+    .foot_left_three {
+        width: 685px;
+    }
+}
+
+@media (max-width: 991px) {
+    .foot_left_three {
+        display: block;
+    }
+    .foot_flex {
+        justify-content: space-around;
+    }
+    .foot_left_three {
+        width: 50%;
+    }
+    .foot_contacts {
+        padding-bottom: 20px;
+    }
+    .foot_other{
+        padding-bottom: 20px;
+    }
+    .foot_title {
+         padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 630px) {
+    .foot_down_info{
+        width: 100%;
+    }
+    .down_two_left {
+        width: 100%;
+    }
+    .foot_down_text {
+        width: 100%;
+        font-size: 14px;
+        padding-left: 5px;
+    }
+    .foot_flex {
+        display: block;
+    }
+    .foot_right_two {
+        display: block;
+    }
+    .foot_left_three {
+        width: 100%;
+    }
+}
+
+@media (max-width: 350px) {
+    .foot_down_contain {
+        padding: 0 10px;
+        width: 100%;
+    }
+    .foot_down_text {
+        width: 100%;
+        font-size: 10px;
+        padding-left: 5px;
+    }
+}

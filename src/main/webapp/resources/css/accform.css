@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    text-decoration: none;
+}
+
+/* Подзаголовок страницы */
+.heading {
+    position: relative;
+    height: 140px;
+    background: no-repeat, linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/bg_image_lk.jpg");
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+.heading_title {
+    padding-top: 26px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 54px;
+}
+
+/* Основная часть сайта */
+.title_wrapper_lk {
+    width: 1315px;
+    margin: 56px auto 19px auto;
+    padding-left: 28px;
+    font-size: 21px;
+}
+
+.wrapper_lk {
+    width: 1315px;
+    margin: 0 auto;
+    margin-bottom: 39px;
+}
+
+.wrapper_lk_office {
+    display: flex;
+}
+
+.first_nav_lk {
+    width: 270px;
+    /*padding: 10px 33px 8px 28px;*/
+    border: 1px solid #c8c8c8;
+    background-color: #fff;
+    border-radius: 10px;
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.link_nav_lk {
+    padding: 8px 33px 8px 28px;
+    border-radius: 10px;
+}
+
+.link_nav_lk:first-child {
+    margin-top: 10px;
+}
+
+.link_nav_lk:last-child {
+    margin-bottom: 10px;
+}
+
+.active .link_lk {
+    color: #11927c;
+}
+
+.line_nav_lk {
+    border: 1px solid #c8c8c8;
+}
+
+.link_lk{
+    text-decoration: none;
+    color: #343434;
+    font-size: 21px;
+}
+
+.second_nav_lk {
+    width: 270px;
+    border: 1px solid #c8c8c8;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 20px;
+    height: 77px;
+    margin-top: 8px;
+}
+
+.second_nav_lk h1{
+    margin: 0;
+    font-size: 25px;
+    color: #11927c;
+}
+
+.second_nav_lk a{
+    font-size: 15px;
+    color: #c8c8c8;
+}
+
+.lk_info {
+    width: 100%;
+    border: 1px solid #c8c8c8;
+    border-radius: 10px;
+    margin: 0 0 0 20px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #FFFFFF;
+    padding: 40px 33px 40px 28px;
+}

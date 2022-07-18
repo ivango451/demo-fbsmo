@@ -5,6 +5,7 @@
 
 <head th:fragment="header">
 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -18,6 +19,9 @@
 
     <!-- Custom styles for this template -->
     <link th:href="@{/resources/css/blog-home.css}" rel="stylesheet">
+    <link th:href="@{/resources/css/style.css}" rel="stylesheet">
+    <link th:href="@{/resources/css/header.css}" rel="stylesheet">
+    <link th:href="@{/resources/css/owl.theme.default.min.css}" rel="stylesheet">
 
 
 
@@ -29,7 +33,7 @@
 </head>
 
     <div th:fragment="navigation" class="container">
-        <a class="navbar-brand" th:href="@{/}">Mirea Blog</a>
+        <a class="navbar-brand" th:href="@{/}">mirea-blog</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -121,6 +125,126 @@
     </footer>
 
 <body>
+<header class="header">
+    <div class="header_container">
+        <div class="header_upper">
+            <nav class="nav">
+                <a class="button_input" href="log_in.html">
+                    АВТОРИЗАЦИЯ
+                </a>
+                <img src="resources/images/user.png" alt="" id="myBtn">
+                <div id="mypopup" class="auth_block">
+                    <div class="auth_block-body">
+                        <label class="tab">ВЫПОЛНИТЬ ВХОД</label>
+                        <form class="tab-form">
+                            <label>
+                                <input class="input" type="text" placeholder="Логин" required/>
+                            </label>
+                            <label>
+                                <input class="input" type="password" placeholder="Пароль" required>
+                            </label>
+                            <div class="auth">
+                                <a id="" class="forget" href="#">Забыли пароль</a>
+                                <a id="registration_link" class="forget">Регистрация</a>
+                            </div>
+                            <button type="submit" class="btn-primary">ВОЙТИ</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="mypopup2" class="auth_block2">
+                    <div class="auth_block-body2">
+                        <div class="container_registration">
+                            <label class="tab">РЕГИСТРАЦИЯ</label>
+                            <img id="active_link_back" src="resources/images/back.png" alt="back">
+                        </div>
+                        <form class="tab-form">
+                            <label>
+                                <input class="input" type="text" placeholder="Логин" required/>
+                            </label>
+                            <label>
+                                <input class="input" type="text" placeholder="Никнэйм" required/>
+                            </label>
+                            <label>
+                                <input class="input" type="password" placeholder="Пароль" required/>
+                            </label>
+                            <label>
+                                <input class="input" type="password" placeholder="Подтверждение пароля" required/>
+                            </label>
+                            <div class="recover">
+                                <input type="checkbox">
+                                <label>Ознакомлен(-а) и принимаю <a href="#">условия регистрации</a></label>
+                            </div>
+                            <button type="submit" class="btn-primary">РЕГИСТРАЦИЯ</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="header_middle">
+            <a href="index.html">
+                <img src="resources/images/logo.png" alt="" class="image_logo">
+            </a>
+            <nav class="right_header_middle">
+                <a class="nav2__link" href="#">
+                    ПРИСОЕДИНЯЙТЕСЬ К НАМ
+                </a>
+                <a class="nav2__link" href="https://www.instagram.com/fbsmo.ru/"><img
+                        src="resources/images/Icon%20awesome-instagram.svg" alt="instagram" class="instagram"></a>
+                <a class="nav2__link" href="#"><img src="resources/images/Icon_simple-tiktok.png" alt="tiktok"
+                                                    class="tiktok"></a>
+                <a class="nav2__link" href="#"><img src="resources/images/Icon_awesome-vk.png" alt="vk" class="vk"></a>
+                <a class="nav2__link" href="#"><img src="resources/images/Icon_awesome-telegram-plane.png" alt="telegram"
+                                                    class="telegram"></a>
+                <a class="nav2__link" href="#"><img src="resources/images/Icon_awesome-facebook.png" alt="facebook"
+                                                    class="facebook"></a>
+            </nav>
+            <div class="section">
+                <a href="#" class="menu-btn">
+                    <span></span>
+                </a>
+            </div>
+            <div class="menu-mobile">
+                <a class="nav__link__mobile" id="active_link__mobile">ГЛАВНАЯ</a>
+                <a class="nav__link__mobile" href="news.html">НОВОСТИ</a>
+                <!--                <a class="nav__link__mobile" href="about_leadership.html">О ФЕДЕРАЦИИ</a>-->
+                <!--
+                                <a class="nav__link__mobile" href="clubs.html">РЕЗИДЕНТЫ</a>
+                                <a class="nav__link__mobile" href="accform.html">АККРЕДИТАЦИЯ</a>
+                -->
+                <a class="nav__link__mobile" href="media.html">МЕДИА</a>
+                <div class="block__menu_auth">
+                    <a class="button_input__mobile" href="log_in.html">
+                        АВТОРИЗАЦИЯ
+                    </a>
+                    <img src="resources/images/user.png" alt="">
+                </div>
+                <div class="block__menu_links">
+                    <a class="nav2__link" href="https://www.instagram.com/fbsmo.ru/"><img
+                            src="resources/images/Icon%20awesome-instagram.svg" alt="instagram" class="instagram"></a>
+                    <a class="nav2__link" href="#"><img src="resources/images/Icon_simple-tiktok.png" alt="tiktok"
+                                                        class="tiktok"></a>
+                    <a class="nav2__link" href="#"><img src="resources/images/Icon_awesome-vk.png" alt="vk" class="vk"></a>
+                    <a class="nav2__link" href="#"><img src="resources/images/Icon_awesome-telegram-plane.png" alt="telegram"
+                                                        class="telegram"></a>
+                    <a class="nav2__link" href="#"><img src="resources/images/Icon_awesome-facebook.png" alt="facebook"
+                                                        class="facebook"></a>
+                </div>
+            </div>
+        </div>
+        <div class="header_lower">
+            <nav class="right_header_lower">
+                <a class="nav__link" id="active_link">ГЛАВНАЯ</a>
+                <a class="nav__link" href="news.html">НОВОСТИ</a>
+                <!--
+                                <a class="nav__link" href="about_leadership.html">О ФЕДЕРАЦИИ</a>
+                                <a class="nav__link" href="clubs.html">РЕЗИДЕНТЫ</a>
+                                <a class="nav__link" href="accform.html">АККРЕДИТАЦИЯ</a>
+                -->
+                <a class="nav__link" href="media.html">МЕДИА</a>
+            </nav>
+        </div>
+    </div>
+</header>
 
 </body>
 </html>

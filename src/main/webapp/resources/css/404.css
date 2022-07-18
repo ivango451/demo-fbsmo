@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    text-decoration: none;
+}
+
+/* ОСновная часть */
+
+.main_all{
+    padding-top: 101px;
+    height: 668px;
+    background-color: #ECECEC;
+}
+.center_info{
+    background: no-repeat url("../images/404.png");
+    height: 439px;
+    width: 594px;
+    background-size: 594px 439px;
+    margin: 0 auto;
+}
+
+.info_text{
+    margin: 0 auto;
+    padding-top: 288px;
+    width: 422px;
+    height: 145px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #c8c8c8;
+    text-align: center;
+}
+@media (max-width: 1670px) {
+    .heading {
+        background: no-repeat, linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/bg_image_lk.jpg");
+        background-size: auto;
+        background-position: center;
+        z-index: 1;
+    }
+    .main_all{
+        padding-top: 88px;
+        height: 581px;
+    }
+    .center_info{
+        height: 382px;
+        width: 517px;
+        background-size: 517px 382px;
+    }
+    .info_text{
+        padding-top: 251px;
+        width: 367px;
+        height: 126px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 1360px) {
+    .main_all{
+        padding-top: 77px;
+        height: 439px;
+    }
+    .center_info{
+        height: 332px;
+        width: 450px;
+        background-size: 450px 332px;
+    }
+    .info_text{
+        padding-top: 218px;
+        width: 319px;
+        height: 110px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 1100px) {
+    .main_all{
+        padding-top: 67px;
+        height: 382px;
+    }
+    .center_info{
+        height: 289px;
+        width: 392px;
+        background-size: 392px 289px;
+    }
+    .info_text{
+        padding-top: 190px;
+        width: 278px;
+        height: 96px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 700px) {
+    .main_all{
+        padding-top: 58px;
+        height: 332px;
+    }
+    .center_info{
+        height: 251px;
+        width: 341px;
+        background-size: 341px 251px;
+    }
+    .info_text{
+        padding-top: 165px;
+        width: 242px;
+        height: 84px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 400px) {
+    .main_all{
+        padding-top: 44px;
+        height: 251px;
+    }
+    .center_info{
+        height: 190px;
+        width: 258px;
+        background-size: 258px 190px;
+    }
+    .info_text{
+        padding-top: 125px;
+        width: 184px;
+        height: 62px;
+        font-size: 8px;
+    }
+}

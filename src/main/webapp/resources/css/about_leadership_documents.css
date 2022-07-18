@@ -1,0 +1,555 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    text-decoration: none;
+}
+
+.heading {
+    position: relative;
+    height: 140px;
+    background: no-repeat, linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/bg_image_lk.jpg");
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+.heading_title {
+    padding-top: 26px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 54px;
+}
+
+.heading_links {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 486px;
+    padding-top: 3px;
+}
+
+.heading_links_text {
+    display: block;
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+}
+.heading_links_text_active {
+    display: block;
+    font-size: 19px;
+    font-weight: bold;
+    color: #11927C;
+}
+.leadership_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 68px;
+}
+
+.leadership {
+    width: 1315px;
+    padding-top: 61px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    grid-gap: 42px;
+}
+
+.leadership_card {
+    display: flex;
+    height: 411px;
+    width: 630px;
+}
+
+.leadership_img img{
+    object-fit: cover;
+}
+
+.leadership_img {
+    height: 410px;
+    width: 277px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.leadership_card_info {
+    padding-left: 34px;
+}
+
+.leadership_fullname {
+    font-size: 27px;
+    font-weight: bold;
+    color: #11927C;
+}
+
+.leadership_status {
+    padding-top: 6px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.leadership_description {
+    padding-top: 34px;
+    font-size: 24px;
+    width: 100%;
+}
+
+.documents_background{
+    background-color: #ececec;
+    padding-top: 34px;
+    padding-bottom: 34px;
+}
+
+.documents_container{
+    padding-top: 66px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+    width: 1315px;
+    border-radius: 8px;
+    background-color: white;
+}
+.documents_search{
+    margin: 0 auto;
+    display: flex;
+    width: 1158px;
+    height: 46px;
+}
+.documents_search input{
+    padding-left: 16px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    font-size: 18px;
+    width: 1080px;
+    height: 45px;
+    outline: none;
+    border: 2px solid #707070;
+}
+.documents_search_button{
+    color: white;
+    font-weight: bold;
+    width: 78px;
+    height: 45px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: #11927C;
+    outline: none;
+    border: 0;
+}
+.search_button_img{
+    height: 29px;
+}
+.document_card_title{
+    width: 1157px;
+    margin: 0 auto;
+    font-size: 24px;
+    padding-top: 30px;
+}
+.document_card_tripple{
+    padding-top: 20px;
+    margin: 0 auto;
+    width: 1157px;
+    justify-content: space-between;
+    display: flex;
+    border-bottom: 2px solid #707070;
+    padding-bottom: 11px;
+}
+.document_card_first{
+    display: flex;
+}
+.document_card_second{
+    display: flex;
+}
+.document_card_third{
+    display: flex;
+}
+.card_name{
+    font-size: 24px;
+    font-weight: bold;
+}
+.card_download{
+    padding-top: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #226262;
+    cursor: pointer;
+    padding-left: 20px;
+}
+.card_icons{
+    padding-top: 8px;
+    display: flex;
+    width: 120px;
+    padding-left: 14px;
+    justify-content: space-between;
+}
+.card_icons_download{
+    width: 22px;
+    height: 22px;
+}
+.card_icons_pdf{
+    width: 23px;
+    height: 23px;
+}
+.card_icons_word{
+    width: 17px;
+    height: 23px;
+}
+.card_icons_exel{
+    width: 17px;
+    height: 23px;
+}
+.card_icons img{
+    cursor: pointer;
+}
+@media (max-width: 1670px) {
+    .heading {
+        background: no-repeat, linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/bg_image_lk.jpg");
+        background-size: auto;
+        background-position: center;
+        z-index: 1;
+    }
+  .leadership{
+      width: 1150px;
+      grid-gap: 36px;
+      padding-top: 40px;
+  }
+    .leadership_card {
+        display: flex;
+        height: 359px;
+        width: 557px;
+    }
+    .leadership_img {
+        height: 358px;
+        width: 241px;
+    }
+    .leadership_fullname {
+        font-size: 23px;
+
+    }
+    .leadership_status {
+        font-size: 21px;
+    }
+    .leadership_description {
+        font-size: 21px;
+        padding-top: 30px;
+    }
+    .documents_container{
+        width: 1150px;
+    }
+    .documents_search{
+        width: 1007px;
+        height: 40px;
+    }
+    .documents_search input{
+        padding-left: 14px;
+        font-size: 16px;
+        width: 940px;
+        height: 39px;
+    }
+    .documents_search_button{
+        width: 68px;
+        height: 39px;
+    }
+    .search_button_img{
+        height: 25px;
+    }
+    .document_card_title{
+        width: 1007px;
+        font-size: 21px;
+        padding-top: 26px;
+    }
+    .document_card_tripple{
+        padding-top: 17px;
+        width: 1007px;
+        padding-bottom: 10px;
+
+    }
+    .card_name{
+        font-size: 21px;
+    }
+    .card_download{
+        padding-top: 7px;
+        font-size: 14px;
+        padding-left: 17px;
+    }
+    .card_icons{
+        padding-top: 7px;
+        width: 104px;
+        padding-left: 12px;
+        justify-content: space-between;
+    }
+    .card_icons_download{
+        width: 19px;
+        height: 19px;
+    }
+    .card_icons_pdf{
+        width: 20px;
+        height: 20px;
+    }
+    .card_icons_word{
+        width: 15px;
+        height: 20px;
+    }
+    .card_icons_exel{
+        width: 15px;
+        height: 20px;
+    }
+}
+@media (max-width: 1360px) {
+    .leadership{
+        width: 1000px;
+        grid-gap: 30px;
+        padding-top: 33px;
+    }
+    .leadership_card {
+        display: flex;
+        height: 312px;
+        width: 485px;
+    }
+    .leadership_img {
+        height: 311px;
+        width: 210px;
+    }
+
+    .leadership_fullname {
+        font-size: 20px;
+
+    }
+    .leadership_status {
+        font-size: 18px;
+    }
+    .leadership_description {
+        font-size: 18px;
+        padding-top: 26px;
+        width: 100%;
+    }
+    .documents_container{
+        padding-top: 60px;
+        padding-bottom: 40px;
+        width: 920px;
+    }
+    .documents_search{
+        width: 800px;
+        height: 35px;
+    }
+    .documents_search input{
+        padding-left: 12px;
+        font-size: 14px;
+        width: 800px;
+        height: 34px;
+    }
+    .documents_search_button{
+        width: 59px;
+        height: 34px;
+    }
+    .search_button_img{
+        height: 22px;
+    }
+    .document_card_title{
+        width: 800px;
+        font-size: 18px;
+        padding-top: 23px;
+    }
+    .document_card_tripple {
+        width: 800px;
+        display: block;
+        border-bottom: 1px solid #707070;
+    }
+    .document_fullcard{
+        display: block;
+    }
+    .card_name{
+        font-size: 18px;
+    }
+}
+@media (max-width: 1100px) {
+    .leadership{
+        width: 100%;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 28px;
+    }
+    .leadership_card {
+        display: flex;
+        height: 271px;
+        width: 100%;
+    }
+    .leadership_img {
+        height: 271px;
+        width: 183px;
+    }
+
+    .leadership_fullname {
+        font-size: 20px;
+
+    }
+    .leadership_status {
+        font-size: 18px;
+    }
+    .leadership_description {
+        font-size: 18px;
+        padding-top: 26px;
+        width: 100%;
+    }
+    .documents_background{
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+    .documents_container{
+        padding-top: 40px;
+        padding-bottom: 35px;
+        width: 100%;
+    }
+    .documents_search{
+        padding-left: 35px;
+        padding-right: 35px;
+        width: 100%;
+        height: 35px;
+    }
+    .documents_search input{
+        padding-left: 12px;
+        font-size: 14px;
+        width: 100%;
+        height: 34px;
+    }
+    .documents_search_button{
+        width: 59px;
+        height: 34px;
+    }
+    .search_button_img{
+        height: 22px;
+    }
+    .document_card_title{
+        width: 100%;
+        font-size: 18px;
+        padding-top: 23px;
+    }
+    .document_card_tripple {
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid #707070;
+    }
+    .document_fullcard{
+        padding-left: 35px;
+        padding-right: 35px;
+        display: block;
+    }
+    .card_name{
+        font-size: 18px;
+    }
+}
+@media (max-width: 700px) {
+    .leadership{
+        width: 100%;
+        padding-right: 25px;
+        padding-left: 25px;
+        padding-top: 23px;
+    }
+    .heading_title {
+        padding-top: 18px;
+font-size: 40px;
+    }
+
+    .heading_links {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    .leadership_card {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    .leadership_img {
+        height: 236px;
+        width: 159px;
+    }
+    .leadership_description {
+         height: 100%;
+     }
+    .card_name{
+        font-size: 16px;
+    }
+    .document_card_title{
+        font-size: 17px;
+    }
+    .card_download{
+        padding-top: 0;
+    }
+    .card_icons{
+        padding-top: 0;
+    }
+    .document_card_second{
+       padding-top: 5px;
+    }
+    .document_card_third{
+        padding-top: 5px;
+    }
+    .document_card_tripple {
+        padding-top: 8px;
+        border-bottom: 1px solid #707070;
+    }
+    .documents_background{
+        padding-top: 17px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .document_fullcard{
+        padding-left: 27px;
+        padding-right: 27px;
+    }
+    .documents_search{
+        padding-left: 27px;
+        padding-right: 27px;
+    }
+    .documents_container{
+        padding-top: 30px;
+    }
+}
+@media (max-width: 400px) {
+    .leadership_card{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .leadership_img {
+        height: 236px;
+        width: 159px;
+    }
+    .leadership_description {
+        padding-top: 10px;
+    }
+    .leadership_card_info{
+        padding: 0;
+        margin: 0;
+    }
+    .leadership_fullname{
+        padding-top: 5px;
+    }
+    .documents_background{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .document_fullcard{
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    .documents_search{
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    .card_name{
+        font-size: 14px;
+    }
+    .document_card_title{
+        padding-top: 10px;
+        font-size: 15px;
+    }
+    .card_icons{
+        grid-gap: 5px;
+    }
+}

@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    text-decoration: none;
+}
+body{
+    background-color: #f9f9f9;
+}
+.heading {
+    position: relative;
+    height: 140px;
+    background: no-repeat, linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/bg_image_lk.jpg");
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+.heading_title {
+    padding-top: 26px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 54px;
+}
+
+.heading_links {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 661px;
+    padding-top: 3px;
+}
+
+.heading_links_text {
+    display: block;
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+}
+.heading_links_text_active {
+    display: block;
+    font-size: 19px;
+    font-weight: bold;
+    color: #11927C;
+}
+.pyramid_into_container{
+    margin: 61px auto 79px;
+    padding: 48px;
+    width: 1315px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+.pyramid_into_flex{
+    display: flex;
+}
+.pyramid_into_img{
+    width: 429px;
+    height: 254px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.into_base_info{
+    padding: 10px 53px;
+}
+.base_info_title{
+    font-size: 22px;
+    font-weight: bold;
+}
+.base_info_text{
+    font-size: 16px;
+    padding-top: 7px;
+}
+.base_info_text span{
+    color: #11927C;
+    font-style: italic;
+    text-decoration: underline;
+}
+.into_description{
+    padding-top: 32px;
+    font-size: 16px;
+}
+.into_more{
+    color: #343434;
+    padding-top: 9px;
+    font-size: 24px;
+    font-style: italic;
+    text-decoration: underline;
+}
+.into_button{
+    cursor: pointer;
+    color: #FFFFFF;
+    width: 442px;
+    height: 44px;
+    background-color: #11927C;
+    border: 1px solid #c2c2c2;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 32px;
+}
+.into_button:hover{
+    background-color: #0c7663;
+}
+.into_contacts{
+    padding-top: 26px;
+}
+.into_contacts_flex{
+    display: flex;
+    align-items: center;
+}
+.into_contacts_text{
+    height: 29px;
+    font-size: 16px;
+}
+.into_contacts_address{
+    width: 18px;
+    height: 29px;
+}
+.into_contacts_number{
+    width: 23px;
+    height: 23px;
+}
+.into_img_container{
+    width: 29px;
+}
+.into_contacts_flex:last-child{
+    margin-top: 10px;
+}
+.back_site{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0 0 0;
+}
+.back_site a{
+    font-size: 19px;
+    font-weight: 500;
+    border-bottom: 1px solid #11927C;
+}
+@media (max-width: 1670px) {
+    .heading {
+        background: no-repeat, linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/bg_image_lk.jpg");
+        background-size: auto;
+        background-position: center;
+        z-index: 1;
+    }
+    .heading_links {
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        width: 640px;
+        padding-top: 3px;
+    }
+
+    .heading_links_text {
+        display: block;
+        font-weight: bold;
+        color: white;
+    }
+    .heading_links_text_active {
+        display: block;
+        font-weight: bold;
+    }
+
+    .pyramid_into_container{
+        margin: 53px auto 69px;
+        padding: 42px;
+        width: 1150px;
+        border-radius: 9px;
+    }
+    .pyramid_into_flex{
+        display: flex;
+    }
+    .pyramid_into_img{
+        width: 373px;
+        height: 221px;
+        border-radius: 5px;
+    }
+    .into_base_info{
+        padding: 9px 46px;
+    }
+    .base_info_title{
+        font-size: 19px;
+    }
+    .base_info_text{
+        font-size: 14px;
+        padding-top: 6px;
+    }
+    .into_description{
+        padding-top: 28px;
+        font-size: 14px;
+    }
+    .into_more{
+        padding-top: 8px;
+        font-size: 21px;
+    }
+    .into_button{
+        width: 385px;
+        height: 38px;
+        border-radius: 9px;
+        font-size: 17px;
+        margin-top: 28px;
+    }
+    .into_contacts{
+        padding-top: 23px;
+    }
+    .into_contacts_flex{
+        display: flex;
+        align-items: center;
+    }
+    .into_contacts_text{
+        height: 25px;
+        font-size: 14px;
+    }
+    .into_contacts_address{
+        width: 16px;
+        height: 25px;
+    }
+    .into_contacts_number{
+        width: 20px;
+        height: 20px;
+    }
+    .into_img_container{
+        width: 25px;
+    }
+    .into_contacts_flex:last-child{
+        margin-top: 9px;
+    }
+    .back_site a{
+        font-size: 18px;
+    }
+}
+@media (max-width: 1360px) {
+    .pyramid_official_title{
+        margin: 0 auto;
+        width: 1000px;
+        padding-top: 63px;
+        padding-left: 40px;
+        font-size: 17px;
+    }
+    .pyramid_into_container{
+        margin: 46px auto 60px;
+        padding: 37px;
+        width: 1000px;
+        border-radius: 8px;
+    }
+    .pyramid_into_flex{
+        display: flex;
+    }
+    .pyramid_into_img{
+        width: 325px;
+        height: 192px;
+        border-radius: 4px;
+    }
+    .into_base_info{
+        padding: 8px 40px;
+    }
+    .base_info_title{
+        font-size: 17px;
+    }
+    .base_info_text{
+        font-size: 12px;
+        padding-top: 5px;
+    }
+    .into_description{
+        padding-top: 24px;
+        font-size: 13px;
+    }
+    .into_more{
+        padding-top: 7px;
+        font-size: 18px;
+    }
+    .into_button{
+        width: 335px;
+        height: 33px;
+        border-radius: 8px;
+        font-size: 15px;
+        margin-top: 24px;
+    }
+    .into_contacts{
+        padding-top: 20px;
+    }
+    .into_contacts_flex{
+        display: flex;
+        align-items: center;
+    }
+    .into_contacts_text{
+        height: 22px;
+        font-size: 12px;
+    }
+    .into_contacts_address{
+        width: 14px;
+        height: 22px;
+    }
+    .into_contacts_number{
+        width: 17px;
+        height: 17px;
+    }
+    .into_img_container{
+        width: 22px;
+    }
+    .into_contacts_flex:last-child{
+        margin-top: 8px;
+    }
+    .back_site a{
+        font-size: 17px;
+    }
+}
+@media (max-width: 1100px) {
+    .pyramid_official_title{
+        padding-top: 20px;
+    }
+    .heading_title{
+        font-size: 50px;
+    }
+    .heading_links {
+        width: 600px;
+    }
+    .pyramid_into_container{
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+        width: auto;
+    }
+    .into_description{
+        padding-top: 24px;
+        font-size: 13px;
+    }
+}
+@media (max-width: 700px) {
+    .pyramid_into_container{
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        margin-top: 20px;
+        width: auto;
+    }
+    .pyramid_official_title{
+        text-align: center;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+    .heading_title{
+        padding-right: 14px;
+        padding-left: 14px;
+        padding-top:20px;
+        font-size: 29px;
+    }
+    .heading_links {
+        display: block;
+        padding-top: 7px;
+        width: 320px;
+        text-align: center;
+    }
+    .pyramid_into_img{
+        width: 100%;
+        height: 210px;
+        border-radius: 4px;
+    }
+    .pyramid_into_flex{
+        display: block;
+    }
+    .into_base_info{
+        text-align: center;
+    }
+    .into_button{
+        width: 100%;
+        height: 38px;
+        border-radius: 8px;
+        font-size: 13px;
+        margin-top: 24px;
+        padding-left: 7px;
+        padding-right: 7px;
+        padding-top: 1px;
+        padding-bottom: 4px;
+    }
+    .back_site a{
+        font-size: 17px;
+    }
+}
+@media (max-width: 400px) {
+    .heading_title{
+        padding-top:2px;
+        font-size: 29px;
+    }
+    .heading_links {
+        display: block;
+        padding-top: 7px;
+        width: 320px;
+        text-align: center;
+    }
+    .heading_links_text{
+        font-size: 18px;
+    }
+    .heading_links_text_active{
+        font-size: 18px;
+    }
+    .pyramid_into_img{
+        width: 100%;
+        height: 160px;
+        border-radius: 4px;
+    }
+    .back_site a{
+        font-size: 15px;
+    }
+}

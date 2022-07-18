@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    text-decoration: none;
+}
+
+.heading {
+    position: relative;
+    height: 140px;
+    background: no-repeat, linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/bg_image_lk.jpg");
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+.heading_title {
+    padding-top: 26px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 54px;
+}
+
+.heading_links {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 418px;
+    padding-top: 3px;
+}
+
+.heading_links_text {
+    display: block;
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+}
+.heading_links_text_active {
+    display: block;
+    font-size: 19px;
+    font-weight: bold;
+    color: #11927C;
+}
+
+.athletes_background{
+    background-color: #ececec;
+}
+.athletes_sort{
+    justify-content: flex-end;
+    max-width: 1315px;
+    margin: 0 auto;
+    padding-top: 16px;
+    display: flex;
+}
+img.athletes_sort_down{
+    cursor: pointer;
+    margin-right: 6px;
+    height: 25px;
+    width: 29px;
+}
+
+img.athletes_sort_up{
+    cursor: pointer;
+    height: 25px;
+    width: 29px;
+}
+.athletes_container{
+    padding-top: 18px;
+    max-width: 1315px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 13px;
+    row-gap: 22px;
+    padding-bottom: 26px;
+}
+.athletes_card {
+    width: 429px;
+    height: 469px;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    border: 1px solid #C8C8C8;
+}
+.athletes_card img{
+    width: 429px;
+    height: 349px;
+    object-fit: cover;
+}
+.athletes_card_fullname{
+    padding-top: 18px;
+    padding-left: 26px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #11927C;
+}
+
+.card_age_disc{
+    padding-top: 15px;
+    padding-left: 26px;
+    font-size: 12px;
+    display: flex;
+}
+.card_age_disc span{
+    color: #11927C;
+}
+.card_disc{
+    padding-left: 14px;
+}
+.card_rank_country{
+    padding-top: 15px;
+    padding-left: 26px;
+    font-size: 12px;
+    display: flex;
+}
+.card_rank_country span{
+    color: #11927C;
+}
+.card_country{
+    padding-left: 24px;
+}
+@media (max-width: 1670px) {
+    .heading {
+        background: no-repeat, linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/bg_image_lk.jpg");
+        background-size: auto;
+        background-position: center;
+        z-index: 1;
+    }
+    .heading_links {
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        width: 364px;
+        padding-top: 3px;
+    }
+
+    .heading_links_text {
+        display: block;
+        font-size: 17px;
+        font-weight: bold;
+        color: white;
+    }
+    .heading_links_text_active {
+        display: block;
+        font-size: 17px;
+        font-weight: bold;
+        color: #11927C;
+    }
+
+
+    .athletes_background{
+        background-color: #ececec;
+        padding-left: 26px;
+        padding-right: 26px;
+    }
+    .athletes_sort{
+        justify-content: flex-end;
+        width: 1150px;
+        margin: 0 auto;
+        padding-top: 14px;
+        display: flex;
+    }
+    img.athletes_sort_down{
+        cursor: pointer;
+        margin-right: 5px;
+        height: 22px;
+        width: 25px;
+    }
+
+    img.athletes_sort_up{
+        cursor: pointer;
+        height: 22px;
+        width: 25px;
+    }
+    .athletes_container{
+        padding-top: 16px;
+        max-width: 1150px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 11px;
+        row-gap: 19px;
+        padding-bottom: 23px;
+    }
+    .athletes_card {
+        width: 373px;
+        height: 418px;
+        border-radius: 7px;
+        border: 1px solid #C8C8C8;
+        padding-bottom: 30px;
+    }
+    .athletes_card img{
+        width: 372px;
+        height: 303px;
+    }
+    .athletes_card_fullname{
+        padding-top: 16px;
+        padding-left: 23px;
+        font-size: 17px;
+    }
+
+
+    .card_disc{
+        padding-left: 12px;
+    }
+
+    .card_rank_country span{
+        color: #11927C;
+    }
+    .card_country{
+        padding-left: 21px;
+    }
+}
+@media (max-width: 1360px) {
+    .athletes_sort{
+        justify-content: flex-end;
+        width: 1000px;
+        margin: 0 auto;
+        padding-top: 12px;
+        display: flex;
+    }
+    img.athletes_sort_down{
+        cursor: pointer;
+        margin-right: 5px;
+        height: 22px;
+        width: 25px;
+    }
+
+    img.athletes_sort_up{
+        cursor: pointer;
+        height: 22px;
+        width: 25px;
+    }
+    .athletes_container{
+        padding-top: 14px;
+        max-width: 1000px;
+        margin: 0 auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 10px;
+        row-gap: 17px;
+        padding-bottom: 20px;
+    }
+    .athletes_card {
+        width: 324px;
+        height: 374px;
+        border-radius: 6px;
+        border: 1px solid #C8C8C8;
+    }
+    .athletes_card img{
+        width: 323px;
+        height: 264px;
+    }
+    .athletes_card_fullname{
+        padding-top: 14px;
+        padding-left: 20px;
+        font-size: 15px;
+    }
+
+
+    .card_disc{
+        padding-left: 11px;
+    }
+
+    .card_rank_country span{
+        color: #11927C;
+    }
+    .card_country{
+        padding-left: 18px;
+    }
+}
+@media (max-width: 1100px) {
+    .athletes_sort{
+        width: 100%;
+        margin-right: 40px;
+    }
+}
+@media (max-width: 700px) {
+    .heading_links {
+        padding-top: 7px;
+        width: 320px;
+    }
+}
+@media (max-width: 400px) {
+    .heading_links {
+        width: 290px;
+    }
+    .heading_title {
+        font-size: 45px;
+    }
+    .athletes_card {
+        width: 282px;
+        height: 364px;
+        border-radius: 6px;
+        border: 1px solid #C8C8C8;
+    }
+    .athletes_card img{
+        width: 281px;
+        height: 230px;
+    }
+    .athletes_card_fullname{
+        padding-top: 14px;
+        padding-left: 20px;
+        font-size: 15px;
+    }
+}

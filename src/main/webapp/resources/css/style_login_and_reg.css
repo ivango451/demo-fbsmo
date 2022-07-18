@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    background-color: #11927c;
+}
+
+
+.circle1 {
+    height: 200px;
+    width: 200px;
+    box-shadow: 0 0 10px #226262;
+    border-radius: 200px;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    z-index: -1;
+}
+
+.circle2 {
+    height: 100px;
+    width: 100px;
+    box-shadow: 1px 1px 20px #226262;
+    border-radius: 100%;
+    position: absolute;
+    top: 15%;
+    right: 20%;
+    z-index: -1;
+}
+
+.circle3 {
+    height: 250px;
+    width: 250px;
+    border: 1px solid green;
+    box-shadow: 0px 10px 9px #226262;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 15%;
+    right: 20%;
+    z-index: -1;
+}
+
+.circle4 {
+    height: 400px;
+    width: 400px;
+    border: 1px solid green;
+    box-shadow: 0px 0px 40px #226262;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 30%;
+    left: 15%;
+    z-index: -1;
+}
+
+.circle5 {
+    height: 600px;
+    width: 600px;
+    box-shadow: 0px 0px 15px #226262;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 7%;
+    right: 30%;
+    z-index: -1;
+}
+
+
+.exit {
+    width: 64px;
+    height: 64px;
+    display: block;
+    text-align: right;
+    margin-left: auto;
+
+
+}
+
+
+.exit__link {
+    padding: 0;
+}
+
+
+.exit__link img {
+    width: 64px;
+    height: 64px;
+
+}
+
+
+.dws-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.dws-wrapper.show {
+
+    display: flex;
+
+}
+
+
+.dws-form {
+    background: rgba(34, 98, 98, 0.5);
+    padding: 10px;
+    width: 330px;
+
+
+}
+
+.dws-form a {
+    text-decoration: none;
+    transition: 0.5s;
+    color: #298cad;
+}
+
+.dws-form a:hover {
+    color: #36d2ff;
+}
+
+.dws-form input {
+    display: block;
+    width: 100%;
+}
+
+
+.tab-form {
+    background: #fff;
+    display: none;
+    padding: 30px 20px 20px;
+}
+
+.tab-form.active {
+    display: block;
+}
+
+label.tab {
+    color: #ffffff;
+    font-weight: 600;
+    padding: 15px 0px 15px 0px;
+    display: inline-block;
+    border-radius: 3px 3px 0 0;
+    margin-bottom: -1px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+label.tab.active {
+    background: #fff;
+    color: #11927c;
+}
+
+.tab::before {
+    content: '\f090';
+    font-family: 'FontAwesome', sans-serif;
+    font-size: 24px;
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+.tab[for*="2"]::before {
+    margin-right: 1px;
+    content: '\f234';
+}
+
+/* Формы */
+
+.input {
+    font-size: 16px;
+    border: 2px solid #e9eaea;
+    padding: 12px 14px;
+    box-sizing: border-box;
+    margin-bottom: 22px;
+    color: #11927c;
+    outline: none;
+}
+
+
+a.button {
+    background-color: #11927c;
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    line-height: 46px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.forget {
+    margin-top: 10px;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/*  Плавающий текст  */
+
+.box-input {
+    position: relative;
+}
+
+.box-input input{
+    border: none;
+    border-bottom: 2px solid #e9eaea;
+    padding: 10px 0;
+
+}
+
+.box-input label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 5px;
+    color: gray;
+    transition: .5s;
+    pointer-events: none;
+
+}
+
+.box-input input:focus ~ label,
+.box-input input:valid ~ label {
+    top: -25px;
+    font-size: 12px;
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .circle3 {
+        display: none;
+    }
+
+    .circle4 {
+        display: none;
+    }
+
+    .circle5 {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 380px) {
+    .dws-form {
+        width: 295px;
+    }
+
+
+}

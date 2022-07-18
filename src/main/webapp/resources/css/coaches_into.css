@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    text-decoration: none;
+}
+
+.heading {
+    position: relative;
+    height: 140px;
+    background: no-repeat, linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/bg_image_lk.jpg");
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+.heading_title {
+    padding-top: 26px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 54px;
+}
+
+.heading_links {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 418px;
+    padding-top: 3px;
+}
+
+.heading_links_text {
+    display: block;
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+}
+
+.heading_links_text_active {
+    display: block;
+    font-size: 19px;
+    font-weight: bold;
+    color: #11927C;
+}
+
+.coach_background {
+    padding-top: 61px;
+    padding-bottom: 79px;
+    background-color: #ECECEC;
+}
+
+.coach_container {
+    margin: 0 auto;
+    width: 1315px;
+    padding: 36px 48px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #bdbdbd;
+}
+
+.main_info_flex {
+    display: flex;
+}
+
+.main_info_flex img {
+    height: 410px;
+    width: 277px;
+    object-fit: cover;
+}
+
+.main_info_type {
+    padding-top: 5px;
+}
+
+.main_info_params {
+    padding-left: 19px;
+}
+
+.main_info_fullname {
+    font-size: 27px;
+    font-weight: bold;
+    color: #11927C;
+    width: 370px;
+}
+
+.main_info_type {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main_info_mini {
+    font-size: 24px;
+    padding-top: 17px;
+}
+
+.main_info_mini span {
+    color: #11927C;
+}
+
+.info_description {
+    padding-top: 35px;
+    font-size: 24px;
+}
+
+.info_description span {
+    color: #11927C;
+}
+
+.info_flex {
+    align-items: center;
+    padding-top: 32px;
+    font-size: 20px;
+    display: flex;
+}
+
+.info_flex_phone {
+    width: 23px;
+    height: 23px;
+}
+
+.info_flex_mail {
+    width: 34px;
+    height: 48px;
+}
+
+.info_flex_text {
+    padding-left: 21px;
+}
+.back_site{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0 0 0;
+}
+.back_site a{
+    font-size: 22px;
+    font-weight: 500;
+    border-bottom: 1px solid #11927C;
+}
+@media (max-width: 1670px) {
+    .heading {
+        background: no-repeat, linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/bg_image_lk.jpg");
+        background-size: auto;
+        background-position: center;
+        z-index: 1;
+    }
+    .heading_links {
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        width: 364px;
+        padding-top: 3px;
+    }
+
+    .heading_links_text {
+        display: block;
+        font-size: 17px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .heading_links_text_active {
+        display: block;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .coach_background {
+        padding-top: 53px;
+        padding-bottom: 69px;
+    }
+
+    .coach_container {
+        width: 1150px;
+        padding: 31px 42px;
+        border-radius: 9px;
+    }
+
+    .main_info_flex img {
+        height: 356px;
+        width: 240px;
+    }
+
+    .main_info_type {
+        padding-top: 5px;
+    }
+
+    .main_info_params {
+        padding-left: 17px;
+    }
+
+    .main_info_fullname {
+        font-size: 23px;
+        width: 321px;
+    }
+
+    .main_info_type {
+        font-size: 21px;
+    }
+
+    .main_info_mini {
+        font-size: 21px;
+        padding-top: 15px;
+    }
+
+    .info_description {
+        padding-top: 30px;
+        font-size: 21px;
+    }
+
+    .info_flex {
+        padding-top: 28px;
+        font-size: 17px;
+    }
+
+    .info_flex_phone {
+        width: 20px;
+        height: 20px;
+    }
+
+    .info_flex_mail {
+        width: 30px;
+        height: 42px;
+    }
+
+    .info_flex_text {
+        padding-left: 18px;
+    }
+    .back_site a{
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 1360px) {
+    .coach_background {
+        padding-top: 46px;
+        padding-bottom: 60px;
+    }
+
+    .coach_container {
+        width: 1000px;
+        padding: 27px 37px;
+        border-radius: 9px;
+    }
+
+    .main_info_flex img {
+        height: 310px;
+        width: 208px;
+    }
+
+    .main_info_type {
+        padding-top: 5px;
+    }
+
+    .main_info_params {
+        padding-left: 15px;
+    }
+
+    .main_info_fullname {
+        font-size: 20px;
+        width: 279px;
+    }
+
+    .main_info_type {
+        font-size: 18px;
+    }
+
+    .main_info_mini {
+        font-size: 18px;
+        padding-top: 13px;
+    }
+
+    .info_description {
+        padding-top: 26px;
+        font-size: 18px;
+    }
+
+    .info_flex {
+        padding-top: 24px;
+        font-size: 15px;
+    }
+
+    .info_flex_phone {
+        width: 17px;
+        height: 17px;
+    }
+
+    .info_flex_mail {
+        width: 26px;
+        height: 37px;
+    }
+
+    .info_flex_text {
+        padding-left: 16px;
+    }
+    .back_site a{
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .coach_background {
+        padding-top: 40px;
+        padding-bottom: 52px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .coach_container {
+        width: 100%;
+        padding: 27px 37px;
+        border-radius: 9px;
+    }
+}
+
+@media (max-width: 700px) {
+    .heading_links {
+        padding-top: 7px;
+        width: 320px;
+    }
+
+    .main_info_flex {
+        text-align: center;
+        width: 100%;
+        display: block;
+        justify-content: space-between;
+    }
+    .main_info_flex img {
+        height: 270px;
+        width: 181px;
+    }
+    .main_info_mini {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        text-align: end;
+    }
+
+    .main_info_mini span {
+        text-align: start;
+        padding-right: 10px;
+    }
+
+    .main_info_params {
+        padding-left: 0;
+    }
+
+    .main_info_fullname {
+        padding-top: 15px;
+        width: 100%;
+    }
+    .back_site a{
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 400px) {
+    .coach_background {
+        padding-top: 25px;
+        padding-bottom: 35px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .coach_container {
+        width: 100%;
+        padding: 27px 25px;
+        border-radius: 9px;
+    }
+    .heading_links {
+        width: 290px;
+    }
+
+    .heading_title {
+        font-size: 45px;
+    }
+
+
+    .main_info_fullname {
+        font-size: 17px;
+    }
+
+    .main_info_type {
+        font-size: 16px;
+    }
+
+    .main_info_mini {
+        font-size: 16px;
+        padding-top: 13px;
+    }
+
+    .info_description {
+        padding-top: 19px;
+        font-size: 16px;
+    }
+
+    .info_flex {
+        padding-top: 19px;
+        font-size: 14px;
+    }
+}

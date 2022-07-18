@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    text-decoration: none;
+}
+body{
+    background-color: #f9f9f9;
+}
+.heading {
+    position: relative;
+    height: 140px;
+    background: no-repeat, linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/bg_image_lk.jpg");
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+.heading_title {
+    padding-top: 26px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 54px;
+}
+
+.heading_links {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 661px;
+    padding-top: 3px;
+}
+
+.heading_links_text {
+    display: inline-block;
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+}
+.heading_links_text_active {
+    display: inline-block;
+    font-size: 19px;
+    font-weight: bold;
+    color: #11927C;
+}
+
+
+.pyramid_official_title{
+    margin: 0 auto;
+    width: 1315px;
+    padding-top: 83px;
+    padding-left: 22px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #25E2C2;
+}
+.official_cards_container{
+    justify-content: center;
+    padding-top: 18px;
+    padding-bottom: 74px;
+    width: 1315px;
+    margin: 0 auto;
+    display: flex;
+    grid-gap: 16px;
+    grid-row-gap: 22px;
+    flex-wrap: wrap;
+}
+.official_card{
+    width: 427px;
+    background-color: #ECECEC;
+    border: 1px solid #b6b6b6;
+    border-radius: 5px;
+}
+.official_card_img{
+    border-radius: 5px;
+    width: 426px;
+    height: 253px;
+    object-fit: cover;
+}
+.official_card_text{
+    padding: 8px 26px;
+}
+.official_card_date{
+    font-size: 16px;
+    color: #707070;
+}
+.official_card_name{
+    padding-top: 8px;
+    font-size: 22px;
+    color: #424242;
+    font-weight: bold;
+}
+.official_card_info{
+    padding-top: 8px;
+    font-size: 16px;
+    color: #424242;
+}
+.official_card_more{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #25E2C2;
+    font-style: italic;
+}
+.past_tournaments_official{
+    cursor: pointer;
+    margin: 0px auto 114px auto;
+    width: 1271px;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    color: #11927C;
+    text-decoration: underline;
+}
+.past_tournaments_official:hover{
+    color: #25E2C2;
+}
+.athletes_sort{
+    justify-content: flex-end;
+    max-width: 1315px;
+    margin: 0 auto;
+    padding-top: 16px;
+    display: flex;
+}
+img.athletes_sort_down{
+    cursor: pointer;
+    margin-right: 6px;
+    height: 25px;
+    width: 29px;
+}
+
+img.athletes_sort_up{
+    cursor: pointer;
+    height: 25px;
+    width: 29px;
+}
+@media (max-width: 1670px) {
+    .heading {
+        background: no-repeat, linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/bg_image_lk.jpg");
+        background-size: auto;
+        background-position: center;
+        z-index: 1;
+    }
+    .pyramid_official_title{
+        margin: 0 auto;
+        width: 1150px;
+        padding-top: 72px;
+        padding-left: 22px;
+        font-size: 19px;
+    }
+    .heading_links {
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        width: 640px;
+        padding-top: 3px;
+    }
+
+    .heading_links_text {
+        display: block;
+        font-weight: bold;
+        color: white;
+    }
+    .heading_links_text_active {
+        display: block;
+        font-weight: bold;
+    }
+
+
+    .athletes_background{
+        padding-left: 26px;
+        padding-right: 26px;
+    }
+    .athletes_sort{
+        justify-content: flex-end;
+        width: 1150px;
+        margin: 0 auto;
+        padding-top: 14px;
+        display: flex;
+    }
+    img.athletes_sort_down{
+        cursor: pointer;
+        margin-right: 5px;
+        height: 22px;
+        width: 25px;
+    }
+
+    img.athletes_sort_up{
+        cursor: pointer;
+        height: 22px;
+        width: 25px;
+    }
+    .official_cards_container{
+        padding-top: 16px;
+        max-width: 1150px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 11px;
+        row-gap: 19px;
+        padding-bottom: 23px;
+    }
+    .official_card {
+        width: 373px;
+        border-radius: 7px;
+        border: 1px solid #C8C8C8;
+        padding-bottom: 10px;
+    }
+    .official_card img{
+        width: 371px;
+        height: 220px;
+    }
+    .official_card_text{
+        padding: 7px 23px;
+    }
+    .official_card_date{
+        font-size: 14px;
+    }
+    .official_card_name{
+        padding-top: 7px;
+        font-size: 19px;
+    }
+    .official_card_info{
+        padding-top: 7px;
+        font-size: 14px;
+    }
+    .official_card_more{
+        margin-top: 17px;
+        font-size: 17px;
+    }
+    .past_tournaments_official{
+        margin: 0 auto 99px auto;
+        width: 1106px;
+        font-size: 21px;
+    }
+}
+@media (max-width: 1360px) {
+    .pyramid_official_title{
+        margin: 0 auto;
+        width: 1000px;
+        padding-top: 63px;
+        padding-left: 40px;
+        font-size: 17px;
+    }
+    .athletes_sort{
+        justify-content: flex-end;
+        width: 1000px;
+        margin: 0 auto;
+        padding-top: 12px;
+        display: flex;
+    }
+    img.athletes_sort_down{
+        cursor: pointer;
+        margin-right: 5px;
+        height: 22px;
+        width: 25px;
+    }
+
+    img.athletes_sort_up{
+        cursor: pointer;
+        height: 22px;
+        width: 25px;
+    }
+    .official_cards_container{
+        padding-top: 14px;
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 10px;
+        row-gap: 17px;
+        padding-bottom: 20px;
+    }
+    .official_card {
+        width: 324px;
+        border-radius: 6px;
+        border: 1px solid #C8C8C8;
+    }
+    .official_card img{
+        width: 322px;
+        height: 192px;
+    }
+    .official_card_text{
+        padding: 6px 20px;
+    }
+    .official_card_date{
+        font-size: 12px;
+    }
+    .official_card_name{
+        padding-top: 6px;
+        font-size: 17px;
+    }
+    .official_card_info{
+        padding-top: 6px;
+        font-size: 12px;
+    }
+    .official_card_more{
+        margin-top: 15px;
+        font-size: 15px;
+    }
+    .past_tournaments_official{
+        margin: 0 auto 86px auto;
+        width: 962px;
+        font-size: 18px;
+        padding-left: 40px;
+    }
+}
+@media (max-width: 1100px) {
+    .pyramid_official_title{
+        padding-top: 20px;
+    }
+    .heading_title{
+        font-size: 50px;
+    }
+    .heading_links {
+        width: 600px;
+    }
+    .athletes_sort{
+        width: 100%;
+        margin-right: 40px;
+    }
+    .athletes_background{
+        padding-left: 26px;
+        padding-right: 26px;
+    }
+    .official_cards_container{
+        width: 100%;
+    }
+    .past_tournaments_official{
+        margin: 0px auto 60px auto;
+    }
+}
+@media (max-width: 700px) {
+    .pyramid_official_title{
+        text-align: center;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+    .heading_title{
+        padding-right: 14px;
+        padding-left: 14px;
+        padding-top:20px;
+        font-size: 29px;
+    }
+    .heading_links {
+        display: block;
+        padding-top: 7px;
+        width: 320px;
+        text-align: center;
+    }
+}
+@media (max-width: 400px) {
+    .heading_title{
+        padding-top:2px;
+        font-size: 29px;
+    }
+    .heading_links {
+        display: block;
+        padding-top: 7px;
+        width: 320px;
+        text-align: center;
+    }
+    .heading_links_text{
+        font-size: 18px;
+    }
+    .heading_links_text_active{
+        font-size: 18px;
+    }
+    .official_card {
+        width: 282px;
+        border-radius: 6px;
+        border: 1px solid #C8C8C8;
+    }
+    .official_card img{
+        width: 281px;
+        height: 180px;
+    }
+}

@@ -74,57 +74,57 @@ CREATE TABLE profile (
 -- triggers
 
 
-
-
-
-CREATE OR REPLACE FUNCTION new_profile() RETURNS TRIGGER
-AS $$
-BEGIN
-INSERT INTO profile(username) VALUES (NEW.username);
-RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
-CREATE TRIGGER tr_new_profile
-    AFTER INSERT ON "user"
-    FOR EACH ROW EXECUTE PROCEDURE new_profile();
-
-
-
-
-CREATE OR REPLACE FUNCTION update_user() RETURNS TRIGGER
-AS $$
-BEGIN
-UPDATE "user" SET dt_updated = now() WHERE user_id=OLD.user_id;
-RETURN OLD;
-END;
-$$ LANGUAGE plpgsql;
-
-
-
-
-CREATE TRIGGER tr_update_user
-    AFTER UPDATE ON profile
-    FOR EACH ROW EXECUTE PROCEDURE update_user();
-
-
-
-
-
-CREATE OR REPLACE FUNCTION delete_profile() RETURNS TRIGGER
-AS $$
-BEGIN
-DELETE FROM profile WHERE username=OLD.username;
-RETURN OLD;
-END;
-$$ LANGUAGE plpgsql;
-
-
-
-CREATE TRIGGER tr_delete_profile
-    BEFORE DELETE ON "user"
-    FOR EACH ROW EXECUTE PROCEDURE delete_profile();
-
+--
+--
+--
+-- CREATE OR REPLACE FUNCTION new_profile() RETURNS TRIGGER
+-- AS $$
+-- BEGIN
+-- INSERT INTO profile(username) VALUES (NEW.username);
+-- RETURN NEW;
+-- END;
+-- $$ LANGUAGE plpgsql;
+--
+-- CREATE TRIGGER tr_new_profile
+--     AFTER INSERT ON "user"
+--     FOR EACH ROW EXECUTE PROCEDURE new_profile();
+--
+--
+--
+--
+-- CREATE OR REPLACE FUNCTION update_user() RETURNS TRIGGER
+-- AS $$
+-- BEGIN
+-- UPDATE "user" SET dt_updated = now() WHERE user_id=OLD.user_id;
+-- RETURN OLD;
+-- END;
+-- $$ LANGUAGE plpgsql;
+--
+--
+--
+--
+-- CREATE TRIGGER tr_update_user
+--     AFTER UPDATE ON profile
+--     FOR EACH ROW EXECUTE PROCEDURE update_user();
+--
+--
+--
+--
+--
+-- CREATE OR REPLACE FUNCTION delete_profile() RETURNS TRIGGER
+-- AS $$
+-- BEGIN
+-- DELETE FROM profile WHERE username=OLD.username;
+-- RETURN OLD;
+-- END;
+-- $$ LANGUAGE plpgsql;
+--
+--
+--
+-- CREATE TRIGGER tr_delete_profile
+--     BEFORE DELETE ON "user"
+--     FOR EACH ROW EXECUTE PROCEDURE delete_profile();
+--
 
 -- Insert
 
@@ -138,7 +138,7 @@ values ('masha010', '$2a$10$DBkNVIqXza47hfVFRPE2zOhNrC39sIu6snxnX.l5djiDvozhRDzv
 insert into "user" (username, password, is_active)
 values ('ilya145', '$2a$10$7XEwVhurjxbNN5JawpuJe.ugVD4aoGdrRLKEHXBk2kb2s7CktQuuu', true);
 insert into "user" (username, password, is_active)
-values ('admin', '$2a$10$9MDN6BdGuUCUhPGpspp2NeGH7wVELl9sejb3I1QliQX5ep1qVDW/C', true);
+values ('admin', '$2a$10$buoJH25TDz1uWyIKM/u2get0.VIifSX3oWEvh6JBDxhQh79YHC2Q6', true);
 insert into "user" (username, password, is_active)
 values ('igor_igor', '$2a$10$ARPZ3bsJsKl6waNbsKdIveeZ2LPFCwFod4USdmvwiKRGEOm3.gpMG', true);
 insert into "user" (username, password, is_active)
@@ -248,20 +248,20 @@ insert into post_tag(post_id, tag_id) values (3, 6);
 
 
 
-SELECT username, password, dt_created, dt_updated, is_active, role_id, username, password, role_id
-from "user" inner join user_role using (user_id);
-
-UPDATE profile SET name = 'Masha', last_name = 'Gladysheva' where username = 'masha010';
-
-
-
-DELETE from post WHERE user_id = 1;
-DELETE from user_role WHERE user_id = 1;
-DELETE from "user" WHERE user_id = 1;
-
-
-CREATE VIEW largePosts AS
-SELECT u.user_id, u.username, p.title, p.content from "user" u INNER JOIN post p ON u.user_id = p.user_id WHERE char_length(p.content)  > (SELECT AVG(char_length(content)) FROM post);
-
-
-SELECT * FROM largePosts;
+-- SELECT username, password, dt_created, dt_updated, is_active, role_id, username, password, role_id
+-- from "user" inner join user_role using (user_id);
+--
+-- UPDATE profile SET name = 'Masha', last_name = 'Gladysheva' where username = 'masha010';
+--
+--
+--
+-- DELETE from post WHERE user_id = 1;
+-- DELETE from user_role WHERE user_id = 1;
+-- DELETE from "user" WHERE user_id = 1;
+--
+--
+-- CREATE VIEW largePosts AS
+-- SELECT u.user_id, u.username, p.title, p.content from "user" u INNER JOIN post p ON u.user_id = p.user_id WHERE char_length(p.content)  > (SELECT AVG(char_length(content)) FROM post);
+--
+--
+-- SELECT * FROM largePosts;
